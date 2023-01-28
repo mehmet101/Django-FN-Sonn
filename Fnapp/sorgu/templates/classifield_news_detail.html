@@ -1,0 +1,92 @@
+{% comment %} 
+
+<div>
+    {% for k in data %}
+      
+        {% include 'partials/_detail.html' %}
+        
+    {%endfor%}
+</div>  {% endcomment %}
+
+
+
+
+{% comment %} <div class="card text-center">
+    <div class="card-header">
+      {{k.news_Label}}
+    </div>
+    <div style="display:flex" class="card-body">
+        <div class="card-body">
+            <h5 class="card-title">{{k.news_Title}}</h5>
+            <h5 class="card-title">{{k.news_Author}}</h5>
+            <h5 class="card-title">{{k.news_Subject}}</h5>
+      
+        </div>
+    </div>
+    <div class="card-body">
+        
+        <p class="card-text">{{k.news_Text}}</p>
+        
+        
+      </div>
+    <div class="card-footer text-muted">
+        {{k.Algo}}
+    </div>
+    <div class="card-footer text-muted">
+        {{k.news_score}}
+    </div>
+  </div> {% endcomment %}
+
+
+
+
+
+
+
+
+  {% load static   %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+   integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+   crossorigin="anonymous">
+
+    <title>List</title>
+</head>
+<body>
+
+  <!-- Navbar başlangıç  -->
+  {% include 'partials/_navbar.html' %}
+  <!-- Navbar bitiş -->
+  {% for k in data %}
+    <h1>{{k.id}} Numaralı sorgulanmış haberin Detay sayfası</h1>
+
+
+    <div>
+      
+      
+        {% include 'partials/_detail.html' %}
+        
+       
+    </div> 
+
+ {%endfor%}
+
+
+    
+</body>
+
+
+
+
+    
+</html>

@@ -1,0 +1,38 @@
+
+  <div class="card text-center">
+    <div class="card-header" style="background-color: {% if k.news_Label %}green{% else %}red{% endif %};">
+      <h4 style="color:#ffffff">
+
+        {{k.news_Label}}
+
+      </h4>
+    </div>
+    <div style="display:flex" class="card-body">
+        <div class="card-body">
+            <h5 class="card-title">Başlık: {{k.news_Title}}</h5>
+            <h5 class="card-title">Yazar: {{k.news_Author}}</h5>
+            <h5 class="card-title">Konu: {{k.news_Subject}}</h5>
+      
+        </div>
+    </div>
+    <div class="card-body">
+        <p class="card-text">{{k.news_Text}}</p>
+      </div>
+      <div class="card-footer text-muted" style="background-color: {% if k.LR_Label %}green{% else %}red{% endif %};">
+        {% if k.LR_Label == 1 %}<h5 style="color:white;">Logistic Regression sınıflandırıcısı haberi gerçek olarak tespit etti.</h5>{% else %}<h5 style="color:white;">Logistic Regression sınıflandırıcısı haberi sahte olarak tespit etti.</h5>{% endif %}
+      </div>
+      <div class="card-footer text-muted" style=" background-color: {% if k.DT_Label %}green{% else %}red{% endif %};">
+        {% if k.DT_Label == 1 %}<h5 style="color:white;">Decision tree sınıflandırıcısı haberi gerçek olarak tespit etti.</h5>{% else %}<h5 style="color:white;">Decision tree sınıflandırıcısı haberi sahte olarak tespit etti.</h5>{% endif %}
+      </div>
+      <div class="card-footer text-muted" style="background-color: {% if k.RFC_Label %}green{% else %}red{% endif %};">
+        {% if k.RFC_Label == 1 %}<h5 style="color:white;">Random Forest sınıflandırıcısı haberi gerçek olarak tespit etti.</h5>{% else %}<h5 style="color:white;">Random Forest sınıflandırıcısı haberi sahte olarak tespit etti.</h5>{% endif %}
+      </div>
+      <div class="card-footer text-muted" style="background-color: {% if k.GBC_Label == -1 %}black{% elif k.GBC_Label == 1 %}green{% else %}red{% endif %};">
+        {% if k.GBC_Label == -1 %}<h5 style="color:white;">Gradient Boosting sınıflandırıcısı kullanılmadı.</h5>{% elif k.GBC_Label == 1 %}<h5 style="color:white;">Gradient Boosting sınıflandırıcısı haberi gerçek olarak tespit etti.</h5>{% else %}<h5 style="color:white;">Gradient Boosting sınıflandırıcısı haberi sahte olarak tespit etti.</h5>{% endif %}
+      </div>
+      <div class="card-footer text-muted" style="background-color: {% if k.NB_Label == -1 %}black{% elif k.NB_Label == 1 %}green{% else %}red{% endif %}; color:white; ">
+        {% if k.NB_Label == -1 %}<h5 style="color:white;">Naive Bayes sınıflandırıcısı kullanılmadı.</h5>{% elif k.NB_Label == 1 %}<h5 style="color:white;"><h5 style="color:white;">Naive Bayes sınıflandırıcısı haberi gerçek olarak tespit etti.</h5>{% else %}Naive Bayes sınıflandırıcısı haberi sahte olarak tespit etti.</h5>{% endif %}
+      </div>
+
+    
+  </div>
