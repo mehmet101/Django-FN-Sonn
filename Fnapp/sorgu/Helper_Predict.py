@@ -101,7 +101,7 @@ def HelpPredict(news_List):
 
 
 
-
+   e1 = datetime.datetime.now()
    print("Toplam zaman =",e1-e)
 
 

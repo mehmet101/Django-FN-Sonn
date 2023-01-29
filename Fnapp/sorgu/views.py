@@ -30,7 +30,7 @@ def home(request):
 
     if request.method == "POST":
          e = datetime.datetime.now()
-         print ("Method Post gelen Saat: = %s:%s:%s" % (e.hour, e.minute, e.second))
+         print ("Method Post Giriş Saati: = %s:%s:%s" % (e.hour, e.minute, e.second))
          print(request)
          news_Title=request.POST["news_Title"]
          news_Author=request.POST["news_Author"]
@@ -42,10 +42,16 @@ def home(request):
 
 
          result=HelpPredict(news_List)
-         news_Label=result['news_Label']
+        
+         print("HelpPredict fonksiyonundan gelen result bilgisi =")
+         print(result)
+
 
      
          data= {"Haberlist":News.objects.all()[::-1]}
+         e1=datetime.datetime.now()
+         
+         print("Method Post Çıkış Saati, Liste Sayfasına Yönlendiriliyor. ", e1)
          
          return render(request, "classifield_news.html", data)
          
