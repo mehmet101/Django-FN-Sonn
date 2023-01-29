@@ -2,11 +2,6 @@ from contextlib import _RedirectStream
 from django.shortcuts import render
 import os 
 from .models import News
-from .Predict_LR import Predict_LR
-from .Predict_RFC import Predict_RFC
-from .Predict_DT import Predict_DT
-from .Predict_GBC import Predict_GBC
-from .Predict_NB import Predict_NB
 from.Helper_Predict import HelpPredict
 import datetime
 

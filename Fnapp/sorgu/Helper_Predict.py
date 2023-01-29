@@ -37,8 +37,6 @@ def HelpPredict(news_List):
    print("LR Score=",LR_Score)
    labels+=LR_Label
 
-
-
    a = Predict_DT(news_Text)
    DT_Label=a["label"]
    DT_Score=a["score"]

@@ -31,3 +31,4 @@ class News(models.Model) :
 
     news_Subject= models.CharField(max_length=50, default="a")
 
+
