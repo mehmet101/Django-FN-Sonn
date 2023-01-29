@@ -68,16 +68,31 @@
   {% include 'partials/_navbar.html' %}
   <!-- Navbar bitiş -->
   {% for k in data %}
-    <h1>{{k.id}} Numaralı sorgulanmış haberin Detay sayfası</h1>
+    
 
 
-    <div>
+    {% comment %} <div>
       
       
         {% include 'partials/_detail.html' %}
         
        
-    </div> 
+    </div>  {% endcomment %}
+
+    <div class="container ">
+        <div class="row mt-4">
+          <div class="col-md-2">
+    
+          </div>
+          <div class="col-md-8">
+            {% include 'partials/_detail.html' %}
+          </div>
+          <div class="col-md-2">
+    
+          </div>
+    
+        </div>
+      </div>
 
  {%endfor%}
 

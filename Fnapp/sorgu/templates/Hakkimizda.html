@@ -1,4 +1,4 @@
-{% load static%}
+{% comment %} {% load static%}
 
 
 <!DOCTYPE html>
@@ -21,11 +21,203 @@
 
   {% include 'partials/_navbar.html' %}
  
-  <h1>Hakkimizda</h1>
+  <h1>Hakkımızda 
+
+    Proje grubu olarak, günümüzde sahte haberlerin yaygınlaşması nedeniyle önemli bir problem olarak karşımıza 
+    çıkan bu sorunun çözümü için çalışmalar yürüttük. Bu amaçla, Sahte Haber Tespit Sistemi adlı projemizi hayata 
+    geçirdik. Bu proje, sahte haberlerin tespitini yapabilmektedir. Projenin yürütülmesi sürecinde,
+     yapay zeka ve makine öğrenmesini kullanarak en doğru sonuçları elde etmeye çalıştık. 
+    Böylece, sahte haberleri tespit etmek ve kullanıcılara ulaştırmak için çalışıyoruz.
+    Projemiz ile ilgili daha fazla bilgi için lütfen bizimle iletişime geçiniz.</h1>
 
   
  </body>
 </html>
+ {% endcomment %}
 
 
 
+{% load static%}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+rel="stylesheet"
+integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+crossorigin="anonymous">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  {% include 'partials/_navbar.html' %}
+    
+    
+
+<div class="about-section">
+  <h1>Hakkımızda</h1>
+  <p>Proje grubu olarak, günümüzde sahte haberlerin yaygınlaşması nedeniyle önemli bir problem olarak karşımıza 
+    çıkan bu sorunun çözümü için çalışmalar yürüttük. Bu amaçla, Sahte Haber Tespit Sistemi adlı projemizi hayata 
+    geçirdik. Bu proje, sahte haberlerin tespitini yapabilmektedir. Projenin yürütülmesi sürecinde,
+    yapay zeka ve makine öğrenmesini kullanarak en doğru sonuçları elde etmeye çalıştık. 
+    Böylece, sahte haberleri tespit etmek ve kullanıcılara ulaştırmak için çalışıyoruz.
+    Projemiz ile ilgili daha fazla bilgi için lütfen bizimle iletişime geçiniz.</p>
+</div>
+
+<h2 style="text-align:center">Ekip</h2>
+<div class="row-md-4">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/muysal.png' %}" alt="Jane" style="width:30%">
+      <div class="container">
+        <h2>Prof.Dr.Mitat Uysal</h2>
+        <p class="title">Proje Kordinatörü</p>
+        <p></p>
+        <p>-Paylaşılmıyor-</p>
+      </div>
+    </div>
+  </div>
+<div class="row-md-4">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/kent.png' %}" alt="Jane" style="width:43%">
+      <div class="container">
+        <h2>Mehmet Kent</h2>
+        <p class="title">Geliştirici</p>
+        <p></p>
+        <p><a href="mailto:kent.mehmet@hotmail.com">kent.mehmet@hotmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="row-md-4">
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'images/okan.png' %}" alt="Jane" style="width:46%">
+        <div class="container">
+          <h2>Okan Çayır</h2>
+          <p class="title">Geliştirici</p>
+          <p></p>
+          <p><a href="mailto:okancyr295@gmail.com">okancyr295@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="row-md-4">
+      <div class="column">
+        <div class="card">
+          <img src="{% static 'images/emir.png' %}" alt="Jane" style="width:40%">
+          <div class="container">
+            <h2>Emir Osman Geyik</h2>
+            <p class="title">Geliştirici</p>
+            <p></p>
+            <p>emrfb73@gmail.com</p>
+            <p><a href="mailto:emrfb73@gmail.com">emrfb73@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+<div class="row-md-4">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/berkay.png' %}" alt="Jane" style="width:40%">
+      <div class="container">
+        <h2>Berkay Arslan</h2>
+        <p class="title">Geliştirici</p>
+        <p></p>
+        <p><a href="mailto:berkayarslan9@gmail.com">berkayarslan9@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-md-4">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'images/furkan.png' %}" alt="Jane" style="width:50%">
+      <div class="container">
+        <h2>Furkan Yılmaz</h2>
+        <p class="title">Geliştirici</p>
+        <p></p>
+        <p><a href="mailto:20180311008@dogus.edu.tr">20180311008@dogus.edu.tr</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

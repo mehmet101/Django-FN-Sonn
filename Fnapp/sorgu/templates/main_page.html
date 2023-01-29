@@ -33,7 +33,7 @@
         <div class="container-fluid py-5">
           <h1 class="display-5 fw-bold">
             Sahte Haber Tespit Uygulaması Nedir?</h1>
-          <p class="col-md-8 fs-4">Gerçekliği doğrulanmamış veya yanıltıcı haberleri tespit etmek için kullanılan bir uygulamadır. Bu uygulamalar genellikle haber metinlerini veya medya dosyalarını analiz eder ve gerçekliği doğrulanmamış veya yanıltıcı olanları tespit eder. Sahte haber tespit uygulamaları, haber kaynaklarının doğruluğunu ve güvenilirliğini kontrol etmekte ve okuyucuları yanıltıcı veya yanıltıcı haberlerden koruyabilmektedir.</p>
+          <p class="col-md-8 fs-4">Gerçekliği doğrulanmamış veya yanıltıcı haberleri tespit etmek için kullanılan bir uygulamadır. Bu uygulama haber metinlerini analiz eder ve gerçekliği doğrulanmamış veya yanıltıcı olanları tespit eder. Sahte haber tespit uygulamaları, haber kaynaklarının doğruluğunu ve güvenilirliğini kontrol etmekte ve okuyucuları yanıltıcı veya yanıltıcı haberlerden koruyabilmektedir.</p>
           <button class="btn btn-primary btn-lg" type="button">
             <a class="nav-link" href="{% url 'question'%}">Haber Sorgula</a>
           </button>
@@ -44,7 +44,9 @@
         <div class="col-md-6">
           <div class="h-100 p-5 text-bg-dark rounded-3">
             <h2>Sorgulanmış Haberleri Listele</h2>
-            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+            <p>Bu bölümde daha önce doğruluğunu teyit ettiğin haberlerin listesine ulaşabilirsin. 
+             <h3 style= "color:red"> Not: !Bu uygulama sayesinde yalnızca önceden eğitilmiş yapay zeka modelleri kullanılarak tahminler elde edilmektedir buradaki işlemin bir tahmin/varsayım olduğunu unutmayınız. </h3>
+            </p>
             <button class="btn btn-outline-light" type="button">
                 <a class="nav-link" href="{% url 'listing'%}">Sorgulanmış Haberleri Listele</a>
             </button>
@@ -53,7 +55,12 @@
         <div class="col-md-6">
           <div class="h-100 p-5 bg-light border rounded-3">
             <h2>Hakkımızda</h2>
-            <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+            <p>Proje grubu olarak, günümüzde sahte haberlerin yaygınlaşması nedeniyle önemli bir problem olarak karşımıza 
+              çıkan bu sorunun çözümü için çalışmalar yürüttük. Bu amaçla, Sahte Haber Tespit Sistemi adlı projemizi hayata 
+              geçirdik. Bu proje, sahte haberlerin tespitini yapabilmektedir. Projenin yürütülmesi sürecinde,
+              yapay zeka ve makine öğrenmesini kullanarak en doğru sonuçları elde etmeye çalıştık. 
+              Böylece, sahte haberleri tespit etmek ve kullanıcılara ulaştırmak için çalışıyoruz.
+              Projemiz ile ilgili daha fazla bilgi için lütfen bizimle iletişime geçiniz.</p>
             <button class="btn btn-outline-secondary" type="button">
                 <a href="{% url 'Hakkimizda'%}" class="nav-link">Hakkımızda</a>
             </button>
@@ -62,7 +69,7 @@
       </div>
   
       <footer class="pt-3 mt-4 text-muted border-top">
-        © 2022
+        © 2023
       </footer>
     </div>
   </main>

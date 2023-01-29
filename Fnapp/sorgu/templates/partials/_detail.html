@@ -3,8 +3,7 @@
     <div class="card-header" style="background-color: {% if k.news_Label %}green{% else %}red{% endif %};">
       <h4 style="color:#ffffff">
 
-        {{k.news_Label}}
-
+        {% if k.news_Label == 0 %}Sahte{% else %}Gerçek{% endif %}
       </h4>
     </div>
     <div style="display:flex" class="card-body">
